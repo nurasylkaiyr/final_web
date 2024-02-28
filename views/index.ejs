@@ -1,0 +1,21 @@
+<div class="main__content">
+    <h1 class="main__text">Final Exam Project</h1>
+    <p class="main__text2">Portfolio Platform using Node.js for WEB Technologies Final Exam</p>
+</div>
+
+<section class="articles">
+<h2 class="articles__heading">Lastest Posts</h2>
+
+<ul class="article_ul">
+    <% data.forEach(post => { %>
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article__date"><%= post.createdAt %></span>
+            </a>
+        </li>
+    <% }) %>
+</ul>
+
+<a href="#" class="pagination">&lt; View Older Posts</a>
+</section>
